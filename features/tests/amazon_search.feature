@@ -17,3 +17,9 @@ Feature: Test for Amazon search
     And Add it to Cart
     And Cart is Clicked
     And Verify Hat is There
+#HW5
+  Scenario: Cycle Through Product Color Options
+    Given Product B081YS2F7N Page
+    Then Click and Verify Each Color Option
+
+
