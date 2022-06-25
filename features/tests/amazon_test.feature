@@ -1,7 +1,7 @@
 # Created by aaron at 6/24/2022
 Feature: Amazon based Test Cases
   # Enter feature description here
-  #HW6
+  #HW6 updated version
   Scenario: User can open and close Amazon Privacy Notice
     Given Open Amazon T&C page
     When Store original window
