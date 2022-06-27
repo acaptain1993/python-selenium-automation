@@ -10,3 +10,10 @@ class Page:
 
     def input_text(self, text, *locator):
         self.driver.find_element(*locator).send_keys(text)
+
+    def find_element(self, *locator):
+        self.driver.find_element(*locator)
+
+    def convert_to_text(self, *locator):
+        conversion = self.driver.find_element(*locator).text
+        return conversion

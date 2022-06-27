@@ -9,6 +9,8 @@ from selenium.webdriver.support import expected_conditions as EC
 def order_link_clicked(context):
     context.app.header.click_orders_link()
 
+
 @then('Verify Sign In Page is Opened')
 def verify_signin_page(context):
-    context.app.signin.verify_page()
+    context.app.signin_page.verify_page()
+

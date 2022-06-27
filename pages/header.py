@@ -8,9 +8,11 @@ class Header(Page):
     FIND_CART = (By.CSS_SELECTOR, '#nav-cart')
     ORDER_LINK = (By.CSS_SELECTOR, "#nav-orders")
 
-    def search_amazon(self):
-        self.input_text('coffee', *self.SEARCH_BAR)
+    def search_amazon(self, text):
+        self.input_text(text, *self.SEARCH_BAR)
         self.click(*self.SEARCH_BTN)
+
+
 
     def click_cart(self):
         self.click(*self.FIND_CART)
