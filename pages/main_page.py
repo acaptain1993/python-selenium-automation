@@ -1,5 +1,7 @@
 from pages.base_page import Page
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.action_chains import ActionChains
+
 
 
 class MainPage(Page):
@@ -16,3 +18,8 @@ class MainPage(Page):
         cart = self.find_element(By.ID, 'add-to-cart-button')
         cart.click()
 
+    def hover_second_bar(self, *locator):
+        actions = ActionChains(self.driver)
+        hoverable = self.driver.find_element(*locator)
+        actions.move_to_element(hoverable)
+        actions.perform()

@@ -17,3 +17,15 @@ class Page:
     def convert_to_text(self, *locator):
         conversion = self.driver.find_element(*locator).text
         return conversion
+
+    def compare(self, expected, list, list_item):
+        expectation = expected
+        results = []
+        item_list = self.driver.find_element(list)
+
+        for item in item_list:
+            item_name = self.driver.find_element(list_item)
+            results += [item_name]
+
+        assert expectation == results, f"{expectation} was expected, instead received {results}"
+

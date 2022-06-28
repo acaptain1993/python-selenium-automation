@@ -21,5 +21,16 @@ Feature: Test for Amazon search
   Scenario: Cycle Through Product Color Options
     Given Product B081YS2F7N Page
     Then Click and Verify Each Color Option
+#HW8
+  Scenario: Use Drop Down, Change Department, Search for Item
+    Given Open Amazon Page
+    Then Change Department to Software
+    When Search for Windows 11
+    Then Verify Current Department
+
+  Scenario: Open Product Page, Hover New Arrivals, Verify Deals
+    Given Product B074TBCSC8 Page
+    Then New Arrivals Hovered
+    Then Verify Deals Present
 
 
